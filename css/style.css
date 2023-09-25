@@ -1,0 +1,151 @@
+/* Fontes do Google */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans:wght@500&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans:wght@500&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@900&display=swap');
+
+ /* Gerais */
+
+/* Eliminando o espaço entre os objetos com a borda */
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Personalização inicial do CSS */
+body {
+    background-color: #3b3b3b; /*Fundo Escuro, porém não complatamente preto */
+    font-family: 'Noto Sans Japanese', sans-serif; /*Fonte principal do projeto */
+    color: #ecf0f1; /* fonte de cor clara, para contraste visual */
+}
+
+/* Tamanho da fonte no cabeçalho*/
+.logo {
+    width: 80px;
+    height: 60px;
+}
+
+/* Personalização do cabeçalho (tamanho, cor, fonte e disposição dos itens) */
+header {
+    height: 8vh; /* Altura */
+    display: flex; 
+    justify-content: space-between;
+    background-color: black;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 1); /* Sombreado */
+    font-family: 'Roboto Condensed', sans-serif; /* Fonte secundária */
+}
+
+/* Disposição do menu no cabeçalho */ 
+ul {
+    display: flex;
+    margin: 20px;
+}
+
+/* Personalização dos itens no menu */
+li {
+    color: #27ae60;
+    list-style-type: none;
+    cursor: pointer;
+    padding-left: 2rem;
+}
+
+/* Personalização do texto dos itens do menu */
+a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+/* Para evidenciar qual item está no foco do mouse */
+a:hover {
+    color: #2ecc71;
+}
+
+h1 {
+    margin-top: 15px; /* Distância do cabeçalho */
+    text-align: center; /* Centralização do texto */
+}
+
+/* Estilização do Formulário */
+form {
+    width: 38%; /* Largura do item */
+    margin: 15px auto; /* Centralização e distância do h1 */
+    padding: 22px;
+    background-color: #747474;
+    border-radius: 16px; /* Arrendodamento das bordas */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 1);
+}
+
+/* Estilização básica das label's */
+label {
+    display: block;
+    color: #ecf0f1;
+    font-weight: 600; /*Espessura da fonte */
+    font-size: 1.0em; /*Tamanho da fonte */
+}
+
+/* Classe para dar espaço em label's específicas*/
+.space{
+    margin-top: 15px;
+}
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="number"],
+input[type="date"]{
+    padding-left: 10px; /* Afastamento do texto para a borda */
+    padding-right: 10px;
+    margin-top: 5px; /* Distância para label */
+    height: 40px;
+    width: 96%;
+    border: 1px solid #27ae60; /* Detalhes verdes */
+    border-radius: 8px;
+    background-color: #3b3b3b; /* Cinza um pouco mais claro para os campos de entrada */
+    color: #ecf0f1; /* Texto claro */
+    font-size: 0.9em;
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+/* Estilização para input em foco */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+    border-color: #2ecc71; /* Verde claro ao focar */
+    outline: none;
+    box-shadow: 0 0 8px #2ecc71; /* Efeito de brilho ao focar */
+}
+
+/* Alinhando label e input's radio e checkbox */
+input[type="radio"],
+input[type="checkbox"]{
+    float: left;
+}
+
+/* Espaço entre as opções*/
+label[for="anos"],
+label[for="meses"]{
+    padding-left: 20px;
+}
+
+/* Estilos para os controles de radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 3px;
+}
+
+/* Estilos para o botão (consultar empréstimo) */
+button {
+    background-color: #27ae60; /* Verde */
+    color: #ecf0f1; /* Texto claro */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+button:hover {
+    background-color: #2ecc71; /* Verde claro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}

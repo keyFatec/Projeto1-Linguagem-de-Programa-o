@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--linguagem: português do Brasil-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular parcela de empréstimo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logocash.png" class="logo"/>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="mailto:swiftcash.contato@gmail.com">Contato</a></li>
+        </ul>
+    </header>     
+
+    <h1>💰 Calculadora de Empréstimo Financeiro</h1>
+    <form>
+        <!-- Tipo text, nome deve ser informado -->  
+        <label for="nome">Nome:</label>
+        <input placeholder="Nome completo" type="text" id="nome" name="nome">
+
+        <!-- Tipo number, valor do empréstimo desejado -->  
+        <label class="space" for="amount">Valor do empréstimo (R$):</label>
+        <input placeholder="Ex: 25000" id="amount" type="number" required>
+
+        <!-- Tipo number, valor da taxa de juros -->  
+        <label class="space" for="rate">Taxa de Juros:</label>
+        <input placeholder="Ex: 1.50 ( = 1,5 %)" id="rate" type="number" min="0" step="0.01" required>
+
+        <!-- Tipo radio, qual será o tipo de juros utilizado em relação ao tempo -->  
+        <label for="espaco" class="space">Tipo de Juros:</label>
+            <input type="radio" id="meses" name="juros" value="mes" required>
+            <label for="meses">Mensal (% a.m)</label>
+            <input type="radio" id="anos" name="juros" value="ano" required>
+            <label for="anos">Anual (% a.a.)</label>
+
+        <!-- Tipo number, número de parcelas em que o valor será pago -->    
+        <label class="space" for="months" >Quantidade de parcelas mensais:</label>
+        <input placeholder="Ex: 12" id="months" type="number" min="1" step="1">
+
+        <!-- Tipo date, data que será paga a primeira parcela -->  
+        <label class="space" for="parcela">Primeira parcela em:</label>
+        <input type="date" id="parcela" name="parcela">
+
+        <!-- Tipo checkbox, sobre concientização de uso -->
+        <div class="ciente">
+        <input type="checkbox" id="ciente" name="ciente" value="CIENTE">
+        <label for="ciente">Estou ciente que se trata apenas de uma simulação.</label>
+        </div><br>
+
+        <!-- Botão, para efetuar o cálculo -->
+        <button type="button" onclick="Calculate()">
+            <i class="bi bi-search"></i>Calcular parcela do empréstimo
+        </button>
+
+        <!-- Exibir o resultado do cálculo-->
+        <h1 class="total" id="total"></h1>
+
+    </form>
+
+<script src="js/emprestimo.js"></script>
+</body>
+</html>                                     

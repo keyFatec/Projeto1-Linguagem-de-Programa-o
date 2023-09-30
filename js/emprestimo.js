@@ -102,6 +102,7 @@ function Calculate(event) {
     const parcela = (FC * amount).toFixed(2);
     const valortotal = ((FC * amount) * months).toFixed(2);
 
+    //exibição dos resultados
     document.getElementById("parcela").innerHTML =
         months + " parcelas de R$ " + parcela;
 
